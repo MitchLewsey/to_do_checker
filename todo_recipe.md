@@ -41,47 +41,28 @@ _Make a list of examples of what the function will take and return._
 # EXAMPLE
 
 """
-Given a lower and an uppercase word
-It returns a list with the uppercase word
+Given a empty string 
+It returns False
 """
-extract_uppercase("hello WORLD") => ["WORLD"]
+check_notes("") => False
 
 """
-Given two uppercase words
-It returns a list with both words
+Given a string with '#TODO' it returns True
 """
-extract_uppercase("HELLO WORLD") => ["HELLO", "WORLD"]
+check_notes("#TODO finish the challenge") => True
 
 """
-Given two lowercase words
-It returns an empty list
+Given a string without '#TODO' returns False
 """
-extract_uppercase("hello world") => []
+check_notes("Finish the challenge") => False
+check_notes("#todo Finish the challenge") => False
 
 """
-Given a lower and a mixed case word
-It returns an empty list
+Given a parameter that is not a string
+Raise a TypeError message "Only strings allowed!"
 """
-extract_uppercase("hello WoRLD") => []
+check_notes(3) => raises TypeError "Only strings allowed!"
 
-"""
-Given a lowercase word and an uppercase word with an exclamation mark
-It returns a list with the uppercase word, no exclamation mark
-"""
-extract_uppercase("hello WORLD!") => ["WORLD"]
-
-"""
-Given an empty string
-It returns an empty list
-"""
-extract_uppercase("") => []
-
-"""
-Given a None value
-It throws an error
-"""
-extract_uppercase(None) throws an error
-```
 
 _Encode each example as a test. You can add to the above list as you go._
 
