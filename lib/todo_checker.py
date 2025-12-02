@@ -1,2 +1,2 @@
 def check_notes(notes):
-    return False
+    return '#TODO' in notes
