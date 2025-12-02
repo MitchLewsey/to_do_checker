@@ -1,2 +1,4 @@
 def check_notes(notes):
-    return '#TODO' in notes
+    if isinstance(notes, str):
+       return '#TODO' in notes
+    raise TypeError("Only strings allowed!")
