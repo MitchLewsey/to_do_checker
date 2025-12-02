@@ -63,7 +63,6 @@ Raise a TypeError message "Only strings allowed!"
 """
 check_notes(3) => raises TypeError "Only strings allowed!"
 
-
 _Encode each example as a test. You can add to the above list as you go._
 
 ## 4. Implement the Behaviour
